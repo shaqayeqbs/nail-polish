@@ -1,0 +1,212 @@
+/* styles/globals.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+    font-family: 'B Yekan';
+    src: url('/fonts/B_Yekan/Yekan.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+*,
+html,
+body {
+    font-family: 'B Yekan', sans-serif;
+    direction: rtl
+}
+
+body {
+    @apply bg-background;
+}
+
+label {
+    display: inline-block;
+
+    margin-bottom: 1rem !important;
+}
+
+input {
+    display: inline-block;
+
+}
+
+
+option {
+    @apply border-0 border-b-2;
+}
+
+/* * {
+  @apply text-textColor;
+} */
+
+p {
+    @apply text-[14px] leading-[24px]
+}
+
+.button {
+    @apply flex justify-center text-[19px] my-8 items-center gap-3 bg-primary w-full no-underline text-white p-3 rounded-[5px]
+}
+
+a {
+    @apply text-[18px]
+}
+
+.social-icon {
+    @apply border-2 p-3 rounded-full bg-secondary border-primary
+}
+
+.btn-outline {
+    @apply border-1 border-fundation p-1 px-3 text-[12px] rounded-2xl
+}
+
+.btn-outline-primary {
+    @apply border-1 border-primary text-primary p-[2px] px-3 text-[12px] rounded-2xl
+}
+
+
+.active {
+    @apply border-2 rounded-lg border-primary p-2 px-4
+}
+
+.secondary-button {
+    @apply flex border-1 border-borderColor my-5 p-3 px-11 w-full justify-between items-center mx-auto gap-4 rounded-[18px];
+}
+
+input {
+    @apply w-full focus:outline-none focus-visible:outline-none bg-white py-3 px-4 text-[12px]
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s !important;
+}
+
+.input-container {
+    @apply flex pl-3 align-middle focus:outline-none focus-visible:outline-none border-1 bg-white border-mutedText mt-4 mb-4 rounded-lg px-2 py-1 w-full items-center text-[15px]
+}
+
+@layer utilities {
+    @variants responsive {
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+    }
+}
+
+.icons {
+    flex-shrink: 0;
+    /* Prevent icon from shrinking */
+}
+
+h1 {
+    @apply text-[33px] font-[700]
+}
+
+.text {
+    @apply text-[12px]
+}
+
+.text-s {
+    @apply text-[10px]
+}
+
+.text-m {
+    @apply text-[18px]
+}
+
+.container {
+    @apply mx-auto text-center
+}
+
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+
+.input-icon {
+    margin-right: 8px;
+    opacity: .4;
+
+}
+
+
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.custom-checkbox label {
+    position: relative;
+    cursor: pointer;
+}
+
+.custom-checkbox label:before {
+    content: "";
+    position: absolute;
+    left: -23px;
+    top: -7px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgb(255 96 0 / var(--tw-bg-opacity));
+    border-radius: 4px;
+}
+
+.custom-checkbox input[type="checkbox"]:checked+label:before {
+    background-color: rgb(255 96 0 / var(--tw-bg-opacity));
+}
+
+.custom-checkbox label:after {
+    content: "✔";
+    position: absolute;
+    left: -20px;
+    top: -11px;
+    font-size: 16px;
+    color: white;
+}
+
+.swiper {
+    @apply relative
+}
+
+.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+    @apply bg-primary !mt-40 bottom-0 z-50
+}
+
+.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic, .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+    @apply bottom-[-rem] z-40
+}
+
+
+option {
+    max-width: 200px !important;
+    width: 100px;
+    background: red;
+    margin: auto;
+}
